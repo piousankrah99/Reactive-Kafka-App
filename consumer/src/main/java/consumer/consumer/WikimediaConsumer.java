@@ -12,7 +12,7 @@ public class WikimediaConsumer {
 
     @KafkaListener(topics = "sniper", groupId = "myGroup")
     public void consumeMsg(String msg) {
-        log.info(format("Consuming the message from wikimedia-stream Topic:: %s", msg));
+        log.info(format("Consuming the message from sniper Topic:: %s", msg));
         // Please feel free to do anything you want with the data
     }
 }
