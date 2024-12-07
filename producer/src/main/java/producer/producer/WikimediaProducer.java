@@ -15,7 +15,7 @@ public class WikimediaProducer {
     private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage(String msg) {
-        // log.info(format("Sending message to alibou Topic:: %s", msg));
+        // log.info(format("Sending message to sniper Topic:: %s", msg));
         kafkaTemplate.send("sniper", msg);
     }
 }
